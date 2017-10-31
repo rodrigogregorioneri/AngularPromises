@@ -11,4 +11,24 @@ export class AppComponent{
         console.log(http.get('https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1')
         .subscribe(res => res.json()));      
       }
-}
+
+/*  falta terminar
+
+      search(term:string) {
+        let promise = new Promise((resolve, reject) => {
+          let apiURL = 'https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1';
+          http.get(apiURL)
+            .toPromise()
+            .then(
+              res => { // Success
+                console.log(res.json());
+                resolve();
+              }
+            );
+        });
+        return promise;
+      }
+      
+*/
+    }
+
