@@ -4,6 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
    imports: [BrowserModule]
 })
-export class AppMobule{
+export class AppModule{
 
 }
