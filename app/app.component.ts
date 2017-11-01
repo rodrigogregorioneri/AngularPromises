@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
- import { Http } from '@angular/http';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'my-app',
@@ -8,8 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent{
     constructor (http: Http){
-        console.log(http.get('https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1')
-        .subscribe(res => res.json()));      
+        console.log(http.get('https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1').map(res => res.json()));    
       }
 
 /*  falta terminar
@@ -28,7 +28,6 @@ export class AppComponent{
         });
         return promise;
       }
-      
 */
     }
 
